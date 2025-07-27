@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>বড়খলা মাদ্রাসা</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="main.css">
+  </head>
+
+
+<body>
+  <div class="scale-wrapper">
+    <!-- তোমার সম্পূর্ণ হেডার, ন্যাভ, কনটেন্ট, ফুটার এই div-এর মধ্যে থাকবে -->
+     <header>
+    <h1>বড়খলা বশিরিয়া আরাবিয়া</h1>
+    <p>ইসলামিয়া টাইটেল মাদ্রাসা</p>
+  </header>
+
+  <nav>
+  <div class="nav-row">
+    <a href="#">মাদ্রাসা সম্পর্কে</a>
+    <a href="#">প্রশিক্ষণ</a>
+    <a href="#about">নীতিমালা</a>
+    <a href="#courses">শ্রেনিসমূহ</a>
+  </div>
+  <div class="nav-row">
+    <a href="#">কিতাবসমূহ</a>
+    <a href="#notice">রুটিন</a>
+    <a href="#admission">ভর্তির আবেদন</a>
+    <a href="#contact">যোগাযোগ</a> 
+  </div>
+</nav>
+
+  
+  
+  <div id="full-date-time" style="font-family:'SolaimanLipi',Arial,sans-serif;font-size:16px;text-align:center; margin-top: 3px;"></div>
+  
+  
+  
+  
+  
+  
+  <section id="resultSection">
+  <h2>শ্রেণি ভিত্তিক রেজাল্ট দেখুন</h2>
+  <label for="classSelect">শ্রেণি নির্বাচন করুন:</label>
+  <select id="classSelect">
+    <option value="">-- নির্বাচন করুন --</option>
+    <option value="mutawassitah1">মুতাওয়াসসিতাহ ১ম</option>
+    <option value="mutawassitah2">মুতাওয়াসসিতাহ ২য়</option>
+    <option value="nahwemi">নাহবেমীর</option>
+    <option value="hidayatunNahu">হেদায়াতুন-নাহু</option>
+    <option value="kafiya">কাফিয়া</option>
+    <option value="sharheJami">শরহে জামি</option>
+    <option value="sharheBekaya">শরহে বেকায়া</option>
+    <option value="mishkat">মিশকাত শরীফ</option>
+    <option value="takmil">তাক্বমীল ফীল হাদিস</option>
+  </select>
+
+  <div id="resultTableContainer" style="margin-top: 20px;"></div>
+</section>
+  
+  
+  
+  
+  
+  <section id="posts">
+  <h2><span style="color: red;">বিজ্ঞপ্তি:</span></h2>
+  <div class="post">
+    <h3>ভর্তি চলছে...</h3>
+    <p>বড়খলা বশিরিয়া মাদ্রাসায় ২০২৫ শিক্ষাবর্ষের জন্য ভর্তি কার্যক্রম চলছে। আগ্রহী ছাত্রদের নির্ধারিত ফরম পূরণ করে আবেদন করার জন্য অনুরোধ করা হচ্ছে।</p>
+    <small>প্রকাশিত: ২৭ জুলাই ২০২৫</small>
+  </div>
+</section>
+  
+  
+  
+
+  <section id="admission">
+    <h2>ভর্তির জন্য আবেদন ফরম</h2>
+    <form action="admission_submit.php" method="POST">
+      <label>পূর্ণ নাম:</label>
+      <input type="text" name="full_name" required />
+
+      <label>পিতার নাম:</label>
+      <input type="text" name="father_name" required />
+
+      <label>মাতার নাম:</label>
+      <input type="text" name="mother_name" />
+
+      <label>জন্ম তারিখ:</label>
+      <input type="date" name="dob" required />
+
+      <label>মোবাইল নম্বর:</label>
+      <input type="tel" name="mobile" required />
+
+      <label>ঠিকানা:</label>
+      <select id="division" name="division" required>
+        <option value="">-- বিভাগ নির্বাচন করুন --</option>
+      </select>
+      <select id="district" name="district" required disabled>
+        <option value="">-- জেলা নির্বাচন করুন --</option>
+      </select>
+      <select id="upazila" name="upazila" required disabled>
+        <option value="">-- উপজেলা নির্বাচন করুন --</option>
+      </select>
+      <select id="union" name="union" required disabled>
+        <option value="">-- ইউনিয়ন নির্বাচন করুন --</option>
+      </select>
+
+      <label>গ্রামের নাম:</label>
+      <input
+        type="text"
+        name="village"
+        placeholder="আপনার গ্রামের নাম লিখুন"
+        required
+      />
+
+      
+      
+      <label>শ্রেণী নির্বাচন:</label>
+<select name="course" required>
+  <option value="">-- ক্লাস নির্বাচন করুন --</option>
+  <option value="mutawassitah1">মুতাওয়াসসিতাহ ১ম</option>
+  <option value="mutawassitah2">মুতাওয়াসসিতাহ ২য়</option>
+  <option value="nahwemi">নাহবেমীর</option>
+  <option value="hidayatunNahu">হেদায়াতুন-নাহু</option>
+  <option value="kafiya">কাফিয়া</option>
+  <option value="sharheJami">শরহে জামি</option>
+  <option value="sharheBekaya">শরহে বেকায়া</option>
+  <option value="mishkat">মিশকাত শরীফ</option>
+  <option value="takmil">তাক্বমীল ফীল হাদিস</option>
+</select>
+      
+      
+      
+      
+
+      <button type="submit">আবেদন জমা দিন</button>
+    </form>
+  </section>
+
+  
+  
+  
+  
+ <section id="payment-methods">
+  <h2>🧾 পেমেন্ট মেথড</h2>
+  <ul>
+    <li class="bkash">
+      <div class="block">
+        <img src="https://www.logo.wine/a/logo/BKash/BKash-Logo.wine.svg" alt="bKash">
+        <a href="https://www.bkash.com" target="_blank">বিকাশ: 017XXXXXXXX (পার্সোনাল)</a>
+      </div>
+    </li>    
+    <li class="nagad">
+      <div class="block">
+        <img src="nagad.png" alt="Nagad">
+        <a href="https://nagad.com.bd" target="_blank">নগদ: 017XXXXXXXX (পার্সোনাল)</a>
+      </div>
+    </li>
+    <li class="rocket">
+      <div class="block">
+        <img src="rocket.png" alt="Rocket">
+        <a href="https://www.dutchbanglabank.com/rocket/rocket.html" target="_blank">রকেট: 017XXXXXXXX (পার্সোনাল)</a>
+      </div>
+    </li>
+    <li class="bank">
+      <div class="block bank-block">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Bank">
+        <div class="bank-info">
+          ব্যাংক একাউন্ট: ইসলামী ব্যাংক<br>
+          একাউন্ট নম্বর: 1234567890<br>
+          শাখা: মৌলভীবাজার
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+  
+   
+  
+  
+  
+  
+  
+ <section id="contact">
+  <div class="contact-header">
+    <h2 style="margin: 0;">যোগাযোগ করুন</h2>
+    <a href="https://wa.me/88017xxxxxxxx" target="_blank" class="whatsapp-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 32 32" width="20" fill="white">
+        <path d="M16 .2C7.4.2.2 7.4.2 16c0 2.8.7 5.5 2.1 7.9L.1 32l8.4-2.2c2.3 1.2 4.9 1.8 7.5 1.8 8.6 0 15.8-7.2 15.8-15.8S24.6.2 16 .2zm0 29.1c-2.3 0-4.6-.6-6.6-1.7l-.5-.3-5 1.3 1.3-4.9-.3-.5c-1.3-2-2-4.3-2-6.6C2.9 8.1 8.9 2 16 2s13.1 6.1 13.1 13.1-6 13.2-13.1 13.2zm7.4-9.7c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.7-.2-1 .2s-1.1 1.3-1.3 1.6c-.2.2-.5.3-.9.1-2.4-1.2-4-2.1-5.6-4.7-.4-.7.4-.6 1.1-2.1.1-.3.1-.6 0-.8-.1-.2-1-2.5-1.4-3.4-.4-.9-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.4-1.5 1.5-1.5 3.6s1.6 4.1 1.8 4.4c.2.3 3.2 5 7.8 6.8 1.1.5 1.9.8 2.5 1s1.2.1 1.7.1c.5-.1 2.3-.9 2.6-1.9.3-1.1.3-2 .2-2.2 0-.2-.3-.3-.6-.4z"/>
+      </svg>
+    </a>
+  </div>
+
+  <p style="margin-top: 10px;">
+    ঠিকানা: গ্রাম: বড়খলা, ডাকঘর: কাঠালতলী (দক্ষিণভাগ উত্তর) - ৩২৫২, উপজেলা: বড়লেখা, জেলা: মৌলভীবাজার, সিলেট, বাংলাদেশ।<br />
+    মোবাইল: ০১৭xxxxxxxx, ০১৯xxxxxxxx<br />
+    ইমেইল: info@bashiriamadrasah.edu.bd
+  </p>
+</section>
+  
+  
+  
+
+  <footer>
+    &copy; ২০২৫ বশিরিয়া মাদ্রাসা | সর্বস্বত্ব সংরক্ষিত
+  </footer>
+
+  
+ 
+  
+<script src="main.js"></script> 
+
+    
+  </div>
+</body>
+
+
+</html>
